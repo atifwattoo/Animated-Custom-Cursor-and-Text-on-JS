@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+.main {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main h1 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 10rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    aqua,
+    blue,
+    Magenta,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    cyan,
+    skyblue
+  );
+  background-size: 400% 400%;
+  animation: animate 15s ease infinite;
+}
+
+.cursor {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: none;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #2696eb, 
+              0 0 20px #2696eb, 
+              0 0 20px #2696eb,
+              0 0 20px #2696eb;
+  mix-blend-mode: difference;
+  background-image: linear-gradient(
+    45deg,
+    aqua,
+    blue,
+    rgb(173, 14, 173),
+    #bf1616,
+    #795107,
+    #f3f328,
+    #219d21,
+    #0c3535,
+    blue,
+    #550755,
+    #086f6f,
+    #156789
+  );
+  background-size: 400% 400%;
+  animation: animate 15s ease infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
